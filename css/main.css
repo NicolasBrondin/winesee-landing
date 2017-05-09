@@ -6,6 +6,18 @@ html, body {
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Funky Dori';
+    src: url('../fonts/funkydori-webfont.eot');
+    src: url('../fonts/funkydori-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/funkydori-webfont.woff2') format('woff2'),
+         url('../fonts/funkydori-webfont.woff') format('woff'),
+         url('../fonts/funkydori-webfont.ttf') format('truetype'),
+         url('../fonts/funkydori-webfont.svg#uvf_funkydoriregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #wrapper { 
     position: relative;
     width: 100vw;
@@ -13,6 +25,17 @@ html, body {
   perspective: 1px;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.navbar {
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    z-index: 999;
+    height:60px;
+    color: white;text-align: center;
+    font-size: 25px;
+    font-family: "Funky Dori";
 }
 
 .parallax {
@@ -39,7 +62,7 @@ html, body {
 
 .slide {
     position: relative;
-    min-height: 300px;
+    min-height: 100vh;
     width: 100%;
 }
 
