@@ -1,10 +1,4 @@
-html, body {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
-}
+/* FONTS */
 
 @font-face {
     font-family: 'Funky Dori';
@@ -18,14 +12,25 @@ html, body {
     font-style: normal;
 }
 
-#wrapper { 
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-  perspective: 1px;
-  overflow-x: hidden;
-  overflow-y: auto;
+/* ANIMATIONS */
+
+@keyframes iphone {
+    0% { background-image: url(../img/iphone1.png) ;}
+    100% { background-image: url(../img/iphone2.png) ;}
 }
+
+/* RESET */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+/* NAVBAR */
 
 .navbar {
     position: fixed;
@@ -33,39 +38,174 @@ html, body {
     width: 100%;
     z-index: 999;
     height:60px;
-    color: white;text-align: center;
-    font-size: 25px;
+}
+
+.navbar h1{
+    color: white;
+    text-align: center;
+    font-size: 35px;
     font-family: "Funky Dori";
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    display: inline-block;
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    float: left;
 }
 
-.parallax {
-  position: absolute;
-    width: 100%;
-
-}
-.parallax.foreground {
-  transform: translateZ(0);
-    
-}
-
-.parallax.foreground.white{
-    background: white;
-}
-.parallax.background {
-  transform: translateZ(-1px) scale(2);
-    
+.navbar ul {
+    list-style-type: none;
+    color: rgba(255,255,255,0.8);
+    float: left;
+    height: 60px;
+    margin: 0;
+    padding: 0;
 }
 
-.parallax.background img {
+.navbar ul li {
+    float: left;
+    height: 44px;
+    line-height: 57px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 25px;
+    font-weight: 200;
+    border-bottom: 1px solid white;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* CONTAINER & SLIDES */
+
+#container { 
+    position: relative;
     width: 100vw;
+    height: 100vh;
+}
+
+
+.slide.background-1 {
+    background-image: url("../img/background1.jpg"); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide.background-2 {
+    background-image: url("../img/background2.jpg"); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide.background-3 {
+    background-image: url("../img/background3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide.background-4 {
+    background-image: url("../img/background4.jpg"); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide.background-5 {
+    background-image: url("../img/background5.jpg");  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .slide {
-    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: white;
+    overflow: hidden;
     min-height: 100vh;
-    width: 100%;
 }
 
-.slide.white{
-    background: white;
+
+.slide:first-child{
+    padding-top: 120px;
+    min-height: 100vh;
+}
+
+.slide h1 {
+    font-size: 72px;
+    font-family: Funky Dori;
+    text-align: center;
+    height: 100px;
+    line-height: 144px;
+    margin: 0;
+}
+
+.iphone{
+    position: relative;
+    width: 250px;
+    height: 510px;
+    background-image: url(../img/iphone.png);
+    background-position: top left;
+    background-size: 100% 100%;
+     
+}
+
+.iphone .iphone-screen{
+    animation-name: iphone;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: background-image 1s ease-in-out;
+    background-position: top left;
+    background-size: 100% 100%;
+    width: 85.5%;
+    height: 72.3%;
+    left: 7.8%;
+    top: 15.4%;
+    position: absolute;
+}
+
+.team-member {
+    position: relative;
+    float:left;
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.team-member img {
+    width:100%;
+    border-radius: 50%;
+}
+
+.team-member p {
+    text-align: center;
+}
+.team-member p.member-name {
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px
+}
+
+.team-member p.member-title {
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 25px;
+    font-weight: 200;
+    margin:0;
 }
