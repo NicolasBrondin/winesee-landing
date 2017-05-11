@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html itemscope itemtype="http://schema.org/Corporation">
     <head>
         <meta charset="utf-8"/>
         <meta name="author" content="Nicolas Brondin" />
-        <meta name="description" content="Winesee est la référence en terme de recommandation de vin grâce à sa technologie de découverte de sensibilité gustative"/>
+        <meta itemProp="description" name="description" content="Winesee est la référence en terme de recommandation de vin grâce à sa technologie de découverte de sensibilité gustative"/>
         <meta name="keywords" content="Winesee, vin, vins, wine, recommander, gustatif, gouts, algorithme, application"/>
         <title>Winesee - Découvrez le vin qui VOUS correspond</title>
         <link rel="stylesheet" href="css/main.css"/>
-        <link rel="icon" href="img/icon.png"/>
+        <link itemProp="image" itemProp="logo" content="img/icon.png" rel="icon" href="img/icon.png"/>
+        <meta itemProp="url" property="og:url" content="http://winesee.co" />
     </head>
-    <body itemscope itemtype="http://schema.org/Corporation">
+    <body >
         <div class="navbar">
             <h1 itemprop="name">Winesee</h1>
             <ul class="hidden-small">
@@ -31,7 +32,7 @@
                 
                 <img src="img/glass.png" id="logo"/>
                 <h1>Winesee</h1>
-                <h2>LA startup experte dans le vin !</h2>
+                <h2 >LA startup experte dans le vin !</h2>
                 </div>
                 <div class="column">
                     
@@ -135,8 +136,8 @@ Debitis omnis autem deserunt ullam adipisci eos. Corrupti ipsa quidem velit simi
             
             <!-- FOOTER -->
             <div class="slide" id="footer">
-                Tout droits réservés © Winesee 2017<br>
-                Fait en <span itemprop="location">France</span> avec ❤
+                Tout droits réservés © <span itemProp="legalName">Winesee SAS</span> 2017<br>
+                Fait en <span itemprop="location" itemscope itemtype="http://schema.org/Place"> <span itemProp="name">France</span></span> avec ❤
             </div>
             
         </div>
