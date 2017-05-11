@@ -12,10 +12,15 @@
     <body>
         <div class="navbar">
             <h1>Winesee</h1>
-            <ul>
+            <ul class="hidden-small">
                 <li> <a href="#mobile">#JeBoisDuVin</a> </li>
                 <li> <a href="#contest">#JeVendsDuVin</a> </li>
                 <li> <a href="#scaling">#JeNoteDesVins</a> </li>
+            </ul>
+            <ul class="hidden-big">
+                <li> <a href="#mobile">#JBDV</a> </li>
+                <li> <a href="#contest">#JVDV</a> </li>
+                <li> <a href="#scaling">#JNDV</a> </li>
             </ul>
         </div>
         <div id="container">
@@ -24,47 +29,68 @@
             <div class="slide background-1" id="home">
                 <div class="column">
                 
-                <img src="img/glass.png" height="300"/>
+                <img src="img/glass.png" id="logo"/>
                 <h1>Winesee</h1>
                 <h2>LA startup experte dans le vin !</h2>
-                <h3>Avec sa gamme d'applications, Winesee améliore l'expérience oenologique, du producteur aux dégustateurs, en passant par les concours et la notation.</h3>
                 </div>
                 <div class="column">
-                    <div class="iphone">
-                        <div class="iphone-screen"></div>
-                    </div>
+                    
+                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwinesee%2Fvideos%2F500419420146468%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden;margin-top:100px;" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                    
                 </div>
-                
+                <h3>Avec sa gamme d'applications, Winesee améliore l'expérience oenologique, du producteur aux dégustateurs, en passant par les concours et la notation.</h3>
+                <br><button><img src="img/arrow.png" width="100"></button>
             </div>
             
             <!-- MOBILE -->
             <div class="slide" id="mobile">
                     <h1>Mobile</h1>
                 <div class="column">
+                    <p>Laboriosam commodi vel aliquid harum officia sint at. Similique sint sunt assumenda ea ea. Et in quasi soluta ipsum quia dolores sit. Nihil dolorum voluptatum voluptatibus et quae ratione voluptatum enim. Assumenda esse ut aut officia enim sit. Libero voluptatum voluptate voluptate nemo rerum esse ex nesciunt.
+
+Debitis omnis autem deserunt ullam adipisci eos. Corrupti ipsa quidem velit similique distinctio. Debitis quaerat nam assumenda nobis sunt ut.</p>
                 </div>
                 <div class="column">
-                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwinesee%2Fvideos%2F500419420146468%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-                    
+                    <div class="iphone">
+                        <div class="iphone-screen"></div>
+                    </div>
                 </div>
             </div>
             
             <!-- CONTEST -->
             <div class="slide background-2" id="contest">
                     <h1>Contest</h1>
+                <div class="column">
+                    <div class="iphone">
+                        <div class="iphone-screen"></div>
+                    </div>
+                </div>
+                <div class="column">
+                    <p>Laboriosam commodi vel aliquid harum officia sint at. Similique sint sunt assumenda ea ea. Et in quasi soluta ipsum quia dolores sit. Nihil dolorum voluptatum voluptatibus et quae ratione voluptatum enim. Assumenda esse ut aut officia enim sit. Libero voluptatum voluptate voluptate nemo rerum esse ex nesciunt.
+
+Debitis omnis autem deserunt ullam adipisci eos. Corrupti ipsa quidem velit similique distinctio. Debitis quaerat nam assumenda nobis sunt ut.</p>
+                </div>
             </div>
             
             <!-- SCALING -->
             <div class="slide" id="scaling">
                     <h1>Scaling</h1>
+                <div class="column">
+                    <p>Laboriosam commodi vel aliquid harum officia sint at. Similique sint sunt assumenda ea ea. Et in quasi soluta ipsum quia dolores sit. Nihil dolorum voluptatum voluptatibus et quae ratione voluptatum enim. Assumenda esse ut aut officia enim sit. Libero voluptatum voluptate voluptate nemo rerum esse ex nesciunt.
+
+Debitis omnis autem deserunt ullam adipisci eos. Corrupti ipsa quidem velit similique distinctio. Debitis quaerat nam assumenda nobis sunt ut.</p>
+                </div>
+                <div class="column">
+                    <div class="iphone">
+                        <div class="iphone-screen"></div>
+                    </div>
+                </div>
             </div>
             
-            <!-- CONTACT -->
-             <div class="slide background-3" id="contact">
-                    <h1>Nous contacter</h1>
-            </div>
+            
             
             <!-- TEAM -->
-            <div class="slide" id="team">
+            <div class="slide  background-3"  id="team">
                     <h1>L'équipe</h1>
                     <a href="https://www.linkedin.com/in/jcarnaud/" target="_blank" class="team-member">
                         <img src="img/jc.jpg"/>
@@ -88,14 +114,29 @@
                     </a>
             </div>
             
+            <!-- CONTACT -->
+             <div class="slide" id="contact">
+                    <h1>Nous contacter</h1>
+                 <p>Pour toute question, demande de devis, communiqué de presse, envoyez-nous un mail à jmd@winesee.co</p>
+                 <a href="mailto:jmd@winesee.co">Envoyer un email</a>
+            </div>
+            
             <!-- LOREM IPSUM -->
              <div class="slide background-4">
-                    <h1>Lorem Ipsum</h1>
+                    <h1>Où nous retrouver ?</h1>
+                 <div id="demoMap" style="height:500px;max-width:50%;margin-left:25%;"></div>
+<script src="OpenLayers.js"></script>
+<script>
+    map = new OpenLayers.Map("demoMap");
+    map.addLayer(new OpenLayers.Layer.OSM());
+    map.zoomToMaxExtent();
+</script>
             </div>
             
             <!-- FOOTER -->
-            <div class="slide footer">
-                    <h1>Footer</h1>
+            <div class="slide" id="footer">
+                Tout droits réservés © Winesee 2017<br>
+                Fait en France avec ❤
             </div>
             
         </div>

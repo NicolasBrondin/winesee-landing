@@ -16,7 +16,14 @@
 
 @keyframes iphone {
     0% { background-image: url(../img/iphone1.png) ;}
-    100% { background-image: url(../img/iphone2.png) ;}
+    33% { background-image: url(../img/iphone2.png) ;}
+    99% { background-image: url(../img/iphone3.png) ;}
+}
+
+@keyframes bounce {
+    0% { transform: translate(0px,0px) }
+    50% { transform: translate(0px,20px) }
+    100% { transform: translate(0px,0px) }
 }
 
 /* RESET */
@@ -90,7 +97,7 @@ padding-right: 10px;
 
 #container { 
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -144,7 +151,8 @@ padding-right: 10px;
 
 
 .slide:first-child{
-    padding-top: 85px;
+    padding-top: 120px;
+    min-height: 100vh;
 }
 
 .slide h1 {
@@ -156,11 +164,36 @@ padding-right: 10px;
     margin: 0;
 }
 
-.slide .column {
-    width:50%;
-    text-align: center;
-    float:left;
-    min-height: 100px;
+@media (min-width: 800px){
+    .slide .column {
+        width:50%;
+        text-align: center;
+        float:left;
+        min-height: 100px;
+    }
+    
+    .hidden-small {
+        display: block;
+    }
+    .hidden-big {
+        display: none;
+    }
+}
+
+@media (max-width: 800px){
+    .slide .column {
+        width:100%;
+        text-align: center;
+        float:left;
+        min-height: 100px;
+    }
+
+    .hidden-small {
+        display: none;
+    }
+    .hidden-big {
+        display: block;
+    }
 }
 
 .iphone{
@@ -175,7 +208,7 @@ padding-right: 10px;
 
 .iphone .iphone-screen{
     animation-name: iphone;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     transition: background-image 1s ease-in-out;
     background-position: top left;
@@ -221,6 +254,11 @@ padding-right: 10px;
     margin:0;
 }
 
+#home {
+    text-align: center;
+}
+
+
 #home h1 {
         color: rgba(192, 57, 43,1.0);
     font-family: Funky Dori;
@@ -236,12 +274,67 @@ margin: 0;
 }
 
 #home h3 {
-    display: inline-block;
-max-width: 75%;
+display: inline-block;
+width: 80%;
 text-align: center;
 color: white;
 font-size: 25px;
 font-weight: 200;
 background: rgba(0,0,0,0.6);
 padding: 15px;
+margin-left: 7%;
+}
+
+#home #logo {
+    height: 350px;
+}
+
+#home button {
+    display: inline;
+    width: 200px;
+height: 200px;
+background: none;
+padding: 0;
+border: none;
+    opacity: 0.5;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#home button img {
+    width: 100%;
+    height: 100%;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    color: black;
+    font-size: 25px;
+}
+
+#contact a {
+    display: inline-block;
+    background: rgba(41, 128, 185,1.0);
+    color: white;
+    font-weight: 200;
+    font-size: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-decoration: none;
+}
+
+#contact a:hover{
+    background: rgba(52, 152, 219,1.0);
+}
+
+#footer {
+    background: #222;
+    color:white;
+    text-align: center;
 }
